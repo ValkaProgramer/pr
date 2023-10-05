@@ -24,8 +24,11 @@ def homework(url):
                 value = item.find('span', 'adPage__content__features__value')
                 value = value.find('a').string if not value.string else value
                 information.append([key.string, value.string])
+            ready_list = []
             for item in information:
-                print(item)
+                # print(item)
+                ready_list.append(item)
+            return ready_list
 
         else:
             print(f"GET request failed with status code: {response.status_code}")

@@ -87,7 +87,7 @@ url = "https://999.md/ru/list/computers-and-office-equipment/cases-and-power-sup
 #         print(f"An unexpected error occurred: {e}")
 
 some_list = []
-inClass(url, some_list, None)
+inClass(url, some_list, 1)
 
 ready_list = []
 for item in some_list:
@@ -96,6 +96,14 @@ for item in some_list:
         ready_list.append(item)
 
 f = open("links.txt", "w")
+
 for item in ready_list:
     f.write(item + '\n')
+# for item in ready_list:
+#     f.write(item)
+#     for props in homework(item):
+#         for prop in props:
+#             f.write(prop)
+#     f.write('\n')
+
 f.close()
